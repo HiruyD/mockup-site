@@ -145,7 +145,7 @@ window.addEventListener("resize", handleResponsiveLayout);
 
 // Language switching
 const languageSelect = document.getElementById("language-select");
-const i18nElements = document.querySelectorAll("[data-i18n]");
+const i18nElements = document.body.querySelectorAll("*");
 
 const translations = {
   en: {
@@ -215,27 +215,27 @@ const translations = {
     "footer.copyright": "© 2024 Adet Shiro. All rights reserved.",
   },
   am: {
+    logo: "አደት ሽሮ",
     "nav.features": "ባህሪያት",
     "nav.benefits": "ጥቅሞች",
-    "nav.testimonials": "የደንበኞች አስተያየቶች",
+    "nav.testimonials": "አስተያየቶች",
     "nav.buyNow": "አሁን ይግዙ",
-    "hero.title": "የእውነተኛ የኢትዮጵያ ምግብ ልምድ",
-    "hero.description":
-      "አደት ሽሮ ጣፋጭና እውነተኛ የኢትዮጵያ ሽሮ ወጥ ለማዘጋጀት የተሰራ ጥራት ያለው የሽምብራ ዱቄት ነው።",
+    "hero.title": "የእውነተኛ ኢትዮጵያዊ ምጥን ሽሮ",
+    "hero.description": "አደት ሽሮ ጥዑም ሽሮ ወጥ ለማዘጋጀት የተሰራ ጥራት ያለው የሽምብራ ዱቄት ነው።",
     "hero.shopNow": "አሁን ይግዙ",
     "hero.learnMore": "ተጨማሪ ይወቁ",
     "features.title": "አደት ሽሮን ለምን መምረጥ አለብዎት?",
     "features.authentic": "100% እውነተኛ",
-    "features.authenticDesc": "ለእውነተኛ ጣዕምና ሽታ በባህላዊ የኢትዮጵያ ምግብ አዘገጃጀት የተዘጋጀ።",
-    "features.quality": "ከፍተኛ ጥራት ያላቸው ግብዓቶች",
-    "features.qualityDesc": "ከጥራት ያለው ሽምብራና በጥንቃቄ ከተቀላቀሉ ቅመማ ቅመሞች የተዘጋጀ።",
-    "features.versatile": "ብዙ አገልግሎት የሚሰጥ",
+    "features.authenticDesc": "በባህላዊ የኢትዮጵያ የምግብ አሰራር የተዘጋጀ።",
+    "features.quality": "ከፍተኛ ጥራት ያላቸው ግብዓቶች የያዘ",
+    "features.qualityDesc": "ከጥራት ያለው ሽምብራና በጥንቃቄ ከተቀመሙ ቅመማ ቅመሞች የተዘጋጀ።",
+    "features.versatile": "ለጤና ተስማሚ",
     "features.versatileDesc": "ለሽሮ ወጥና ለሌሎች የኢትዮጵያ ምግቦች ተስማሚ።",
-    "features.flavor": "풍부한 ጣዕም",
-    "features.flavorDesc": "የኢትዮጵያ ምግብ እውነተኛ ጣዕም ወደ ወጥ ቤትዎ ያመጣል።",
+    "features.flavor": "ልዩ ጣዕም",
+    "features.flavorDesc": "የኢትዮጵያ ምግብ እውነተኛ ጣዕም ወደ ወጥ ቤትዎ ይመልሱ።",
     "benefits.title": "የኢትዮጵያ ምግብ ልምድ",
     "benefits.taste": "እውነተኛ ጣዕም",
-    "benefits.tasteDesc": "በራስዎ ቤት ውስጥ የኢትዮጵያ ምግብ እውነተኛ ጣዕም ይቀምሱ።",
+    "benefits.tasteDesc": "በራስዎ ቤት ውስጥ እውነተኛ ጣዕም ይቀምሱ።",
     "benefits.nutritious": "영양가 있는 ምግብ",
     "benefits.nutritiousDesc": "ፕሮቲንና ፋይበር የበዛበት፣ ለጤናማና አርኪ ምግብ ተስማሚ።",
     "benefits.easy": "ቀላል አዘገጃጀት",
@@ -255,7 +255,7 @@ const translations = {
     "pricing.addToCart": "ወደ ዘንቢል ጨምር",
     "cta.title": "እውነተኛ የኢትዮጵያ ምግብ ለመቅመስ ዝግጁ ነዎት?",
     "cta.description":
-      "አደት ሽሮን በወጥ ቤታቸው አساሲ አካል ካደረጉ ሺዎች የሚቆጠሩ እርካታ ያገኙ ደንበኞች ጋር ይቀላቀሉ።",
+      "አደት ሽሮን በወጥ ቤታቸው አሳሲ አካል ካደረጉ ሺዎች የሚቆጠሩ እርካታ ያገኙ ደንበኞች ጋር ይቀላቀሉ።",
     "cta.button": "የእርስዎን አደት ሽሮ ዛሬ ያግኙ",
     "footer.tagline": "እውነተኛ የኢትዮጵያ የሽምብራ ዱቄት",
     "footer.shop": "መገበያያ",
@@ -282,7 +282,7 @@ const translations = {
       "አደት ሽሮ ጣዕሚ ዘለዎን ሓቀኛን ኢትዮጵያዊ ሽሮ ወጢ ንምድላው ዝተሰርሐ ዓይነተ-ፍሉይ ናይ ሽምብራ ዱቀት እዩ።",
     "hero.shopNow": "ሕጂ ይግዝኡ",
     "hero.learnMore": "ተወሳኺ ይፈልጡ",
-    "features.title": "አደት ሽሮ ንምንታይ ክትመርጹ ኣለኩም?",
+    "features.title": "አደት ሽሮ ንምንታይ ክትመርጹ አለኩም?",
     "features.authentic": "100% ሓቀኛ",
     "features.authenticDesc": "ንሓቀኛ ጣዕምን ሽታን ብባህላዊ ኢትዮጵያዊ ምግቢ ኣሰራርሓ ዝተዳለወ።",
     "features.quality": "ልዑል ጥራት ዘለዎም ጥረ ነገራት",

@@ -940,11 +940,6 @@ footer {
   cursor: pointer;
 }
 
-[lang="am"],
-[lang="ti"] {
-  direction: rtl;
-}
-
 [lang="am"] body,
 [lang="ti"] body,
 [lang="om"] body {
